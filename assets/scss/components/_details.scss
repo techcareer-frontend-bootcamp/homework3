@@ -1,10 +1,15 @@
 .details {
+    display: grid;
     height: calc(100vh - ( #{$header-height}) * 2.5);
-    min-height: 500px;
+    min-height: 600px;
     grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
     margin-top: 2.5rem;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: auto;
+    }
 
     &__box {
         margin-bottom: 2.5rem;
@@ -24,9 +29,9 @@
     }
 
     &__img { 
-        width: 100%;
-        padding-bottom: 100px; 
+        width: 100%; 
         text-align: center;
+        align-self: center;
 
         & img {
             width: 170px;
